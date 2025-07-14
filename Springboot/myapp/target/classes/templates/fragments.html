@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <footer id="fragment-tag" th:fragment="footer1">
+        <div class="container">
+            <h1>This is a the footer from fragment</h1>
+        </div>
+    </footer>
+
+    <!-- we can pass args or dynamic values while including template -->
+    <footer id="fragment-tag-2" th:fragment="footer2(firstName,lastName)">
+        <div class="container">
+            <h1>This is a the footer from fragment with name <span th:text="${firstName} + ' ' +${lastName}"></span></h1>
+        </div>
+    </footer>
+</body>
+</html>

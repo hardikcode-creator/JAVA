@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Iterating through Collection using Thymeleaf</h1>
+    <ul>
+        <li th:each="n,status : ${list}">
+            <span  th:style="${status.odd} ? 'color:red' : ' ' " th:text="${status.index}+1 + ' '+${n}"></span>
+        </li>
+    </ul>
+</body>
+</html>

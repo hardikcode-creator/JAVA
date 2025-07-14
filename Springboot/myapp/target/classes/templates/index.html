@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>About Learning about thymeleaf</h1>
+  <h2>Owner is   <span th:text="${name}" ></h2></span>
+  <h2>Jai <span th:text="${#strings.toUpperCase(god)}"></span></h2> 
+
+  <!-- We can also store variables  -->
+
+  <div th:with="a=5 ,b=7 ,  n=${name}">
+
+    <h1> Value of a is <span th:text="${a}"></span></h1>
+<h2><span th:text="'Sum of '+ ${a} + ' and '+ ${b} +' is : '+${a+b}"></span></h2>
+  </div>
+
+</body>
+</html>

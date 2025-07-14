@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Learning about fragments in thymeleaf</h1>
+    <footer id="host-tag" th:include="~{fragments :: footer1}"></footer>
+    <!-- we can pass dynamic value while including fragment template -->
+    <footer id="host-tag-2" th:replace="~{fragments::footer2('Hardik','Agrawal')}"></footer>
+</body>
+</html>
